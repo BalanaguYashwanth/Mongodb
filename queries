@@ -95,7 +95,15 @@ test > db.customers.createIndex({name:"yash"})
 test > db.customers.dropIndex({name:"yash"})
 
 test > db.customers.getIndex()
- 
+
+books = []
+test > db.customers.find()
+                    .sort({age:1})
+                    .skip(0)
+                    .limit(10)
+                    .forEach((item)=>(books.push(item))
+                    
+                    
 
 
 
