@@ -62,7 +62,41 @@ sample_airbnb > db.customers.find({name:1}).sort({age:20})
 
 sample_airbnb > db.customers.find({age:{$nin:[20,29]})
 
-sample_airbnb > db.customers.find({age:{$nin:[{name:'yash'},{name:'bash'}]})
+sample_airbnb > db.customers.find({age:{$nin:[{name:'yash'},{name:'bash'}]}))
 
 sample_airbnb > db.listingsAndReviews.find({host_verifications:["email"]}) // if host_verifications exact match with email
+
+sample_airbnb > db..listingsAndReviews.find({geners:{$all:['fantasy','sci-fi']}})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
