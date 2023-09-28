@@ -1,0 +1,39 @@
+> show dbs
+
+sample_airbnb        52.57 MiB
+sample_analytics      9.54 MiB
+sample_geospatial     1.28 MiB
+sample_guides        40.00 KiB
+sample_mflix        109.74 MiB
+sample_restaurants    6.27 MiB
+sample_supplies       1.05 MiB
+sample_training      47.78 MiB
+sample_weatherdata    2.63 MiB
+
+> use sample_mflix
+
+sample_mflix > db.getCollectionNames()
+
+[
+  'sessions',
+  'users',
+  'movies',
+  'theaters',
+  'embedded_movies',
+  'comments'
+]
+
+sample_mflix > db.users.find()
+
+{
+  _id: ObjectId("59b99db6cfa9a34dcd7885ba"),
+  name: 'Cersei Lannister',
+  email: 'lena_headey@gameofthron.es',
+  password: '$2b$12$FExjgr7CLhNCa.oUsB9seub8mqcHzkJCFZ8heMc8CeIKOZfeTKP8m'
+}
+{
+  _id: ObjectId("59b99db4cfa9a34dcd7885b7"),
+  name: 'Robert Baratheon',
+  email: 'mark_addy@gameofthron.es',
+  password: '$2b$12$yGqxLG9LZpXA2xVDhuPnSOZd.VURVkz7wgOLY3pnO0s7u2S1ZO32y'
+}
