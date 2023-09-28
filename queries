@@ -72,9 +72,7 @@ sample_airbnb > db.listingsAndReviews.find({"images.medium_url":"makedeveasy"}) 
 
 sample_airbnb > db.listingsAndReviews.deleteOne({"_id":Object(1234567890)})
 
-
-
-
+sample_airbnb > db.listingsAndReviews.deleteMany({"books":"cleancode"})
 
 
 
