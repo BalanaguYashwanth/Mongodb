@@ -90,7 +90,11 @@ test > db.customers.updateOne({id:Object(12345678754)},{$inc:{page:2}}) //increm
 
 test > db.customers.updateOne({id:Object(12345678754)},{$push:{bucket:{$each:[2,3]}}}) //adding 2,3 of each bucket for each item
 
+test > db.customers.createIndex({name:"yash"})
 
+test > db.customers.dropIndex({name:"yash"})
+
+test > db.customers.getIndex()
  
 
 
