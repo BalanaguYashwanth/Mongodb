@@ -66,7 +66,13 @@ sample_airbnb > db.customers.find({age:{$nin:[{name:'yash'},{name:'bash'}]}))
 
 sample_airbnb > db.listingsAndReviews.find({host_verifications:["email"]}) // if host_verifications exact match with email
 
-sample_airbnb > db..listingsAndReviews.find({geners:{$all:['fantasy','sci-fi']}})
+sample_airbnb > db.listingsAndReviews.find({geners:{$all:['fantasy','sci-fi']}})
+
+sample_airbnb > db.listingsAndReviews.find({"images.medium_url":"makedeveasy"}) //fetch specific data from objects
+
+sample_airbnb > db.listingsAndReviews.deleteOne({"_id":Object(1234567890)})
+
+
 
 
 
