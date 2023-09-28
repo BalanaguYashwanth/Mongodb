@@ -60,6 +60,7 @@ sample_airbnb > db.customers.find({name:1}).limit(1)
 
 sample_airbnb > db.customers.find({name:1}).sort({age:20})
 
+sample_airbnb > db.customers.find({age:{$nin:[20,29]})
 
-
+sample_airbnb > db.customers.find({age:{$nin:[{name:'yash'},{name:'bash'}]})
 
