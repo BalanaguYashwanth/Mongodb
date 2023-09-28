@@ -37,3 +37,14 @@ sample_mflix > db.users.find()
   email: 'mark_addy@gameofthron.es',
   password: '$2b$12$yGqxLG9LZpXA2xVDhuPnSOZd.VURVkz7wgOLY3pnO0s7u2S1ZO32y'
 }
+
+sample_mflix > use sample_airbnb
+
+sample_airbnb > db.listingsAndReviews.find({amenities:{$in:['wifi', 'ac']}) 
+
+sample_airbnb > db.listingsAndReviews.find({amenities:{$in:['wifi', 'ac']}) 
+
+sample_airbnb > db.listingsAndReviews.find({amenities:{$in:['wifi', 'ac']}) 
+
+sample_airbnb > db.listingsAndReviews.find({bedrooms:1,price:{$lt:30}})
+
