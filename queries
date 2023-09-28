@@ -50,3 +50,16 @@ sample_airbnb > db.listingsAndReviews.find({bedrooms:1,price:{$lt:30}})
 
 sample_airbnb > db.listingsAndReviews.find({$or:[{bedrooms:2},{cleaning_fee:{$lt:100}}]})
 
+sample_airbnb > db.customers.find({},{name:1})
+
+sample_airbnb > db.customers.find({age:'29'},{name:1})
+
+sample_airbnb > db.customers.find({name:1}).sort()
+
+sample_airbnb > db.customers.find({name:1}).limit(1)
+
+sample_airbnb > db.customers.find({name:1}).sort({age:20})
+
+
+
+
