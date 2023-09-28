@@ -74,6 +74,24 @@ sample_airbnb > db.listingsAndReviews.deleteOne({"_id":Object(1234567890)})
 
 sample_airbnb > db.listingsAndReviews.deleteMany({"books":"cleancode"})
 
+sample_airbnb > use test
+
+test > db.customers.updateOne({name:'bash'},{$set:{status:'goo'}})
+
+test > db.customers.updateOne({status:'goo'},{$set:{status:'good'}}) //override the existing name won't create any duplicate key and value
+ 
+test > db.customers.updateMany({},{bucket:['goo'], page:0}) //store in the id=12345678754
+ 
+test > db.customers.updateOne({id:Object(12345678754)},{$pull:{bucket:'goo'}}) //removing the item
+
+test > db.customers.updateOne({id:Object(12345678754)},{$push:{bucket:'good'}}) // adding the item
+
+test > db.customers.updateOne({id:Object(12345678754)},{$inc:{page:2}}) //increment page by 2 number
+
+test > db.customers.updateOne({id:Object(12345678754)},{$push:{bucket:{$each:[2,3]}}}) //adding 2,3 of each bucket for each item
+
+
+ 
 
 
 
