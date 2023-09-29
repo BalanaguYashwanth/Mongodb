@@ -104,17 +104,18 @@ test > db.customers.find()
                     .forEach((item)=>(books.push(item))
                     
                     
+db.customers.aggregate([{$addFields:{alt:"$name"}}])
+
+db.customers.update({},{$push:{alt1:'hi'}})
+
+db.customers.aggregate({$match:{priority:1}},{$count:"1"})
+
+db.customers.aggregate({$group:{_id:"$age"}}) 
+
+db.customers.find({}).sort({amount:1})
 
 
-
-
-
-
-
-
-
-
-
+db.customers.aggregate({$match:{priority:1}})
 
 
 
