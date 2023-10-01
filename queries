@@ -117,8 +117,11 @@ db.customers.find({}).sort({amount:1})
 
 db.customers.aggregate({$match:{priority:1}})
 
+db.accounts.aggregate([{$addFields:{products_count:{$size:"$products"}}}]) //size of products array, counted in seperate product_count
 
+db.accounts.aggregate([{$match:{limit:10000}},{$group:{_id:null,count:{$sum:1}}}])
 
+db.accounts.aggregate([{$addFields:{products_count:{$size:"$products"}}},{$group:{_id:null,count:{$sum:1}}}])
 
 
 
