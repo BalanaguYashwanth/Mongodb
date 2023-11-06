@@ -1,3 +1,5 @@
+Resource - https://www.w3resource.com/mongodb-exercises/
+
 > show dbs
 
 sample_airbnb        52.57 MiB
@@ -123,9 +125,15 @@ db.accounts.aggregate([{$match:{limit:10000}},{$group:{_id:null,count:{$sum:1}}}
 
 db.accounts.aggregate([{$addFields:{products_count:{$size:"$products"}}},{$group:{_id:null,count:{$sum:1}}}])
 
+db.restaurants.find({"grades.score":{$mod:[7,0]}},{restaurant_id:1,name:1,grades:1}).limit(1)
 
+db.restaurants.find({"address.coord":{$exists:1,$type:2}}).limit(1)
 
+db.restaurants.find({"address.street":{$exists:true}}).limit(1)
 
+db.restaurants.find().sort({cuisine:1,borough:-1})
+
+db.restaurants.find({"address.coord.1":{$gt:42,$lt:52}})
 
 
 
